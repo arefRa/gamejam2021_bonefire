@@ -21,7 +21,7 @@ namespace Aref.Com.GameJam {
             {
                 Debug.Log("Hemlet Found");
 
-                GameObject t_hamlet = Instantiate(other.gameObject, _objectFound.transform.position, _objectFound.transform.rotation, _objectFound.transform) as GameObject;
+                GameObject t_hamlet = Instantiate(other.gameObject, _objectFound.transform.position, _objectFound.transform.rotation) as GameObject;
                 t_hamlet.GetComponent<Rigidbody>().isKinematic = true;
 
                 _gameManagerScript.ObjectSDone += 1;
