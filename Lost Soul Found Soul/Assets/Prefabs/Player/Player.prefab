@@ -192,6 +192,7 @@ GameObject:
   - component: {fileID: 1110414776513408859}
   - component: {fileID: 1110414776513408856}
   - component: {fileID: 1110414776513408852}
+  - component: {fileID: 570361045}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -329,6 +330,25 @@ MonoBehaviour:
   _isRunning: 0
   _isJumping: 0
   _carryingHeavy: 0
+--- !u!114 &570361045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110414776513408853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf9465fd6501d2f49a0014151e298645, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pickUpKey: 101
+  _dropDownKey: 113
+  _lightEquiptSlot: {fileID: 358016782025112817}
+  _heavyEquiptSlot: {fileID: 5776911905702947131}
+  _pickUpDistance: 4
+  _slowMoveSpeed: 3
+  _canGrab: 0
 --- !u!1 &1110414777946315202
 GameObject:
   m_ObjectHideFlags: 0
