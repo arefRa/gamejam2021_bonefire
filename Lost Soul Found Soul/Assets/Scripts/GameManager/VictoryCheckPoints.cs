@@ -21,8 +21,9 @@ namespace Aref.Com.GameJam {
             {
                 Debug.Log("Hemlet Found");
 
-                GameObject t_hamlet = Instantiate(other.gameObject, _objectFound.transform.position, _objectFound.transform.rotation) as GameObject;
+                GameObject t_hamlet = Instantiate(other.gameObject, _objectFound.transform.position, _objectFound.transform.rotation * Quaternion.Euler(-90.0f,0.0f,180.0f) ) as GameObject;
                 t_hamlet.GetComponent<Rigidbody>().isKinematic = true;
+                t_hamlet.gameObject.tag = "Untouchable";
 
                 _gameManagerScript.ObjectSDone += 1;
                 Destroy(other.gameObject);

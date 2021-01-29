@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Grabable_L
   - Grabable_H
+  - Untouchable
   layers:
   - Default
   - TransparentFX
