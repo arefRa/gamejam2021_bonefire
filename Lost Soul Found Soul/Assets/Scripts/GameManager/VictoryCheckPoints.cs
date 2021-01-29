@@ -12,7 +12,7 @@ namespace Aref.Com.GameJam {
 
         private void Start()
         {
-            _gameManagerScript = GameObject.Find("GameManager").GetComponent<GameManager>();
+            _gameManagerScript = GameObject.Find("Game Manager").GetComponent<GameManager>();
         }
 
         private void OnTriggerEnter(Collider other)
@@ -20,7 +20,10 @@ namespace Aref.Com.GameJam {
             if(other.gameObject.name == _lostObjectName)
             {
                 Debug.Log("Hemlet Found");
-                Instantiate(other.gameObject, _objectFound.transform.position, _objectFound.transform.rotation, _objectFound.transform);
+
+                GameObject t_hamlet = Instantiate(other.gameObject, _objectFound.transform.position, _objectFound.transform.rotation, _objectFound.transform) as GameObject;
+                t_hamlet.GetComponent<Rigidbody>().isKinematic = true;
+
                 _gameManagerScript.ObjectSDone += 1;
                 Destroy(other.gameObject);
                 Destroy(gameObject);
